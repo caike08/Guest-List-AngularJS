@@ -1,0 +1,94 @@
+/* Style css*/
+@import url(http://fonts.googleapis.com/css?family=Alef);
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Alef', sans-serif;
+}
+
+.header {
+	width: 700px;
+	height: 200px;
+	margin: 50px auto;
+	border: 1px solid #CCC;
+	box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.54);
+	color: #4F4F4F;
+}
+
+.header h1 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 30px;
+}
+.header p {
+	text-align: center;
+	font-size: 14px;
+	margin: 65px 0;
+}
+
+.header form label {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px 10px 17px;
+}
+
+.header form input {
+	margin-top: 8px;
+}
+
+.header form input.btn {
+	width: 80px;
+	height: 30px;
+}
+
+.list-guests {
+	width: 85%;
+	margin: 30px auto;
+	min-width: 330px;
+}
+
+.list-guests dl {
+    border: 1px solid #CCCCCC;
+    float: left;
+    height: 90px;
+    margin: 15px;
+    width: 300px;
+    box-shadow: 3px 3px 8px rgba(50, 50, 50, 0.41);
+    cursor: move;
+    background-color: #FFF;
+}
+
+.list-guests dl:active {
+	opacity: 0.8;
+}
+
+.list-guests dl dt {
+    float: left;
+    margin: 5px;
+}
+
+.list-guests dl div dd {
+	margin-left: 5px;
+}
+
+.list-guests dl div dd:hover {
+	background: url(../images/edit.png) no-repeat 98% 0 transparent;
+	cursor: pointer;
+}
+
+.list-guests dl div {
+	display: block;
+    float: left;
+    height: 27px;
+    position: relative;
+    top: 15px;
+    width: 200px;
+}
+
+.list-guests dl input {
+	left: 160px;
+    position: relative;
+    top: 20px;
+}

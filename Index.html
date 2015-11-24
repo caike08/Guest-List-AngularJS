@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <title>Guest List</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="shortcut icon" href="images/favicon.png">
+</head>
+<body ng-controller="guestController">
+	<div class="header">
+		<h1>Guest List</h1>
+		<form>
+			<label>
+				Name:
+				<input type="text" ng-model="name" placeholder="type your name here"/>
+			</label>
+			<label>
+				Email:
+				<input type="email" ng-model="email" placeholder="example@mail.com">
+			</label>
+			<input type="submit" ng-click="addGuest()" ng-click="editGuest()" value="Add" class="btn btn-success">
+		</form>
+		<p>Tip: Double Click to edit the name or the email</p>
+	</div>
+	<div class="list-guests" id="sortable">
+		<dl data-ng-repeat="guest in guests" draggable="true" id="drop">
+			<dt><img ng-src="{{guest.img}}"></dt>
+			<div>
+				<dd ng-dblclick="editGuestName(guest)"><strong>{{guest.name}}</strong></dd>
+				<dd ng-dblclick="editGuestEmail(guest)">{{guest.email}}</dd>
+			</div>
+			<div>
+				<input type="button" value="Delete" ng-click="deleteGuest($index)" class="btn btn-danger btn-mini"/>
+			</div>
+		</dl>
+	</div>
+	<script src="js/angular-1.0.1.min.js"></script>
+	<script src="js/guestController.js"></script>
+	<script src="js/MD5.js"></script>
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/dragAndDrop.js"></script>
+</body>
+</html>
